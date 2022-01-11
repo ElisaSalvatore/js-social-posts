@@ -13,7 +13,7 @@ const postsArray = [
     {
         id: 1,
         autore: 'Eric Mangione',
-        profilo: '',
+        profilo: './img/profile-picture-1.jpg',
         data: 'mm-gg-yyyy',
         testo: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cumque culpa consequatur esse earum fugiat voluptates error vel. Consequatur exercitationem tenetur inventore sequi. Accusamus, voluptatum! Harum inventore quod explicabo rem!',
         immagine: './img/post-image-1.jpg',
@@ -23,12 +23,23 @@ const postsArray = [
     {
         id: 2,
         autore: 'Anna Rougon',
-        profilo: '',
+        profilo: './img/profile-picture-2.jpg',
         data: 'mm-gg-yyyy',
         testo: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cumque culpa consequatur esse earum fugiat voluptates error vel. Consequatur exercitationem tenetur inventore sequi. Accusamus, voluptatum! Harum inventore quod explicabo rem!',
         immagine: './img/post-image-2.jpg',
         likes: '40'
     },
+
+    {
+        id: 3,
+        autore: 'Margaret Smith ',
+        profilo: './img/profile-picture-3.jpg',
+        data: 'mm-gg-yyyy',
+        testo: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cumque culpa consequatur esse earum fugiat voluptates error vel. Consequatur exercitationem tenetur inventore sequi. Accusamus, voluptatum! Harum inventore quod explicabo rem!',
+        immagine: './img/post-image-3.jpg',
+        likes: '65'
+    },
+    
 ];
 
 // Milestone 2
@@ -45,7 +56,7 @@ for (let i = 0; i < postsArray.length; i++) {
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img src="${post.profilo}" alt="${post.autore} Foto Profilo">                    
+                        <img class="profile-pic" src="${post.profilo}" alt="${post.autore} Foto Profilo">                    
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${post.autore}</div>
