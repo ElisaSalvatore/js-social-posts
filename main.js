@@ -94,6 +94,8 @@ for (let i = 0; i < postsArray.length; i++) {
 
 const likeButton = document.querySelectorAll('.js-like-button');
 
+const likedPostsArray = [];
+
 for (let i=0; i < likeButton.length; i++) {
     likeButton[i].addEventListener('click', function() {
         likeButton[i].classList.add('like-button--liked'); 
@@ -101,6 +103,9 @@ for (let i=0; i < likeButton.length; i++) {
         const likes = document.getElementById(`like-counter-${postsArray[i].id}`);
         likeNumber[i]++;
         likes.innerHTML = likeNumber[i];
+
+        likedPostsArray.push(postsArray[i].id);
+        console.log(likedPostsArray);
     });
 };
 
