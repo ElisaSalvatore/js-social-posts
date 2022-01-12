@@ -100,7 +100,6 @@ const likeButton = document.querySelectorAll('.js-like-button'); //ritorn aun ar
 //assunto(2): per ogni post c'è un solo counter.
 
 const likesCounters = document.querySelectorAll('.js-likes-counter');
-const likedPostsArray = [];
 
 for (let i=0; i < likeButton.length; i++) {
     const button = likeButton[i];
@@ -110,8 +109,6 @@ for (let i=0; i < likeButton.length; i++) {
         //"nell'istante in cui sto eseguendo questa azione non far nient'altro se non questo".
 
         this.classList.add('like-button--liked'); 
-
-        const idPost = i + 1; //TODO
 
         //salvo in una variabile l'html del counter.
         const currentCounterHtml = likesCounters[i];
@@ -123,9 +120,8 @@ for (let i=0; i < likeButton.length; i++) {
         //Ri-salvo (sovrascrivo) l'inner Html con il contatore attuale + 1.
         currentCounterHtml.innerHTML = currentCounterInt + 1;
        
-        //Inserisco i post a cui ho messo mi piace in un secondo array.
-        likedPostsArray.push(postsArray[i].id);
-        console.log(likedPostsArray);
+       //salviamo il nuovo valore all'interno dell'oggetto
+       postsArray[i].likes++;
     });
 
 };
